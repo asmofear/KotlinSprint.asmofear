@@ -8,29 +8,21 @@ package org.example.lesson_1
 //например так: 01:30:09;
 //- Значения часов, минут и секунд отображать двумя цифрами.
 
-fun main () {
+fun main() {
+    val totalSecondsInSpace = 6480
 
-    val secondsInSpace: Int = 6480
+    val hours = totalSecondsInSpace / totalSecondsInHour
 
-//    Выведение остатка
-    val remainder = secondsInSpace % theAxiomValue
-        println("Остаток от деления $secondsInSpace секунд на $theAxiomValue равен $remainder")
-        val remainderVariable = remainder
-        println("Остаток секунд - $remainder")
+    val remainingSecondsAfterHours = totalSecondsInSpace % totalSecondsInHour
 
-    val minutesInSpace = secondsInSpace / theAxiomValue
+    val minutes = remainingSecondsAfterHours / 60
 
-//    Выведение остатка
-    val remainder2 = minutesInSpace % theAxiomValue
-        println("Остаток от деления $minutesInSpace минут на $theAxiomValue равен $remainder2")
-        val remainderVariable2 = remainder2
-        println("Остаток минут - $remainder2")
+    val seconds = remainingSecondsAfterHours % 60
 
-    val hoursInSpace = (minutesInSpace / theAxiomValue)
+    val formattedTime = String.format("%02d:%02d:%02d", hours, minutes, seconds)
 
-    println("$minutesInSpace минут в космосе")
-    println("$hoursInSpace часов в космосе")
+    println("Гагарин провел в космосе: $formattedTime")
 
 }
 
-const val theAxiomValue = 60
+const val totalSecondsInHour = 3600
