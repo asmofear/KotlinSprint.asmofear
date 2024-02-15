@@ -10,31 +10,27 @@ package org.example.lesson_1
 
 fun main () {
 
-    val secondsInSpace: Double = 6480.0
-
-    val secondsInMinute = 60
-
-    val minutesInHour = 60
+    val secondsInSpace: Int = 6480
 
 //    Выведение остатка
-    val remainder = secondsInSpace % secondsInMinute
-        println("Остаток от деления $secondsInSpace секунд на $secondsInMinute равен $remainder")
+    val remainder = secondsInSpace % theAxiomValue
+        println("Остаток от деления $secondsInSpace секунд на $theAxiomValue равен $remainder")
         val remainderVariable = remainder
         println("Остаток секунд - $remainder")
 
-    val minutesInSpace = secondsInSpace / secondsInMinute
+    val minutesInSpace = secondsInSpace / theAxiomValue
 
 //    Выведение остатка
-    val remainder2 = minutesInSpace % minutesInHour
-        println("Остаток от деления $minutesInSpace минут на $minutesInHour равен $remainder2")
+    val remainder2 = minutesInSpace % theAxiomValue
+        println("Остаток от деления $minutesInSpace минут на $theAxiomValue равен $remainder2")
         val remainderVariable2 = remainder2
         println("Остаток минут - $remainder2")
 
-    val hoursInSpace = (minutesInSpace / minutesInHour)
+    val hoursInSpace = (minutesInSpace / theAxiomValue)
 
     println("$minutesInSpace минут в космосе")
     println("$hoursInSpace часов в космосе")
 
-
-
 }
+
+const val theAxiomValue = 60
