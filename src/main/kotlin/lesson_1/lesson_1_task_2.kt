@@ -21,7 +21,7 @@ fun main() {
 
     val сongrazForThePurchase: String = "Каааааайф! Ты что-то купил в нашем магазине, сяп!"
 
-    val numberOfEmployees: Int = 1999
+    var numberOfEmployees: Int = 2000
 
     println(numberOfOrder)
 
@@ -29,6 +29,6 @@ fun main() {
 
 //    println(numberOfEmployees)
 
-    println(numberOfEmployees)
+    println(--numberOfEmployees)
 
 }
