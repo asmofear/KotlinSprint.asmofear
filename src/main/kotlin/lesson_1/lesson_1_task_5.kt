@@ -19,6 +19,7 @@ fun main() {
 
     val seconds = remainingSecondsAfterHours % 60
 
+//    Строчку ниже я полностью скопировал с ChatGPT, но в принципе я понимаю что это за код и метод format
     val formattedTime = String.format("%02d:%02d:%02d", hours, minutes, seconds)
 
     println("Гагарин провел в космосе: $formattedTime")
