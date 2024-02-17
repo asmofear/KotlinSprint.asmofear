@@ -15,9 +15,9 @@ fun main() {
 
     val remainingSecondsAfterHours = totalSecondsInSpace % totalSecondsInHour
 
-    val minutes = remainingSecondsAfterHours / 60
+    val minutes = remainingSecondsAfterHours / axiomValue
 
-    val seconds = remainingSecondsAfterHours % 60
+    val seconds = remainingSecondsAfterHours % axiomValue
 
 //    Строчку ниже я полностью скопировал с ChatGPT, но в принципе я понимаю что это за код и метод format
     val formattedTime = String.format("%02d:%02d:%02d", hours, minutes, seconds)
@@ -27,3 +27,5 @@ fun main() {
 }
 
 const val totalSecondsInHour = 3600
+
+const val axiomValue = 60
