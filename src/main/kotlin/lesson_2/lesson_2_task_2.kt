@@ -13,23 +13,23 @@ package org.example.lesson_2
 
 fun main () {
 
-    val permanentStaff: Int = 50
+    val permanentStaff = 50
 
-    val permStaffSalary: Int = 30000
+    val permStaffSalary = 30000
 
-    val internStaff: Int = 30
+    val internStaff = 30
 
-    val internSalary: Int = 20000
-//
-    val totalExpensesPerm: Int = (permanentStaff * permStaffSalary)
+    val internSalary = 20000
 
-    val totalExpensesIntern: Int = (internStaff * internSalary)
+    val totalExpensesPerm = permanentStaff * permStaffSalary
 
-    val allExpenses: Int = (totalExpensesPerm + totalExpensesIntern)
+    val totalExpensesIntern = internStaff * internSalary
 
-    val totalStaff: Int = (permanentStaff + internStaff)
+    val allExpenses = totalExpensesPerm + totalExpensesIntern
 
-    val averageByExpenses: Int = ((totalExpensesIntern + totalExpensesPerm)) / totalStaff
+    val totalStaff = permanentStaff + internStaff
+
+    val averageByExpenses: Int = allExpenses / totalStaff
 
     println("""Расходы на постоянных сотрудников = $totalExpensesPerm руб.
         |Общие расходы по ЗП после прихода стажеров = $allExpenses руб.
