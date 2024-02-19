@@ -20,7 +20,7 @@ fun main() {
     val percentInYear: Float = percentDeposit / percentTotal
     val compoundInterest = clientDeposit * ( 1 + percentInYear) * totalTimeDeposit
 
-    println(compoundInterest)
+    println("Через 20 лет у вас будет $compoundInterest рублей")
 }
 
 const val percentTotal = 100.0f
